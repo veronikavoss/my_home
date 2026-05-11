@@ -1,0 +1,15 @@
+.apps-page {
+  padding-bottom: 64px;
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .apps-grid {
+    grid-template-columns: 1fr;
+  }
+}

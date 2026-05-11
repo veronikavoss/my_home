@@ -1,0 +1,35 @@
+.watchlist-page {
+  padding-bottom: 64px;
+}
+
+.page-header {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  background: linear-gradient(to right, #fff, var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-description {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+}
+
+.watchlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .watchlist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+  }
+}
