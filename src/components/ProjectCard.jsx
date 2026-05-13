@@ -3,7 +3,7 @@ import './ProjectCard.css';
 
 const ProjectCard = ({ title, description, tags, link, repoLink, image }) => {
   return (
-    <div className="project-card glass">
+    <div className="project-card pop-card">
       <div className="project-image-container">
         {image ? (
           <img src={image} alt={title} className="project-image" />

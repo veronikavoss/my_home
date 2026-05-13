@@ -16,7 +16,7 @@ const Home = () => {
         </p>
         
         <div className="hero-cards animate-fade-in delay-200">
-          <Link to="/apps" className="hero-card glass group">
+          <Link to="/apps" className="hero-card pop-card group">
             <div className="hero-card-icon">
               <Code2 size={32} />
             </div>
@@ -29,7 +29,7 @@ const Home = () => {
             </div>
           </Link>
           
-          <Link to="/watchlist" className="hero-card glass group">
+          <Link to="/watchlist" className="hero-card pop-card group">
             <div className="hero-card-icon">
               <Film size={32} />
             </div>

@@ -2,7 +2,7 @@ import './MovieCard.css';
 
 const MovieCard = ({ title, year, genre, image, rating }) => {
   return (
-    <div className="movie-card glass">
+    <div className="movie-card pop-card">
       <div className="movie-image">
         <img src={image} alt={title} />
         <div className="movie-overlay">

@@ -1,19 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap');
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 :root {
-  --bg-color: #050505;
-  --bg-gradient: radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.08), transparent 25%),
-                 radial-gradient(circle at 85% 30%, rgba(129, 140, 248, 0.08), transparent 25%);
-  --surface-color: rgba(255, 255, 255, 0.03);
-  --surface-border: rgba(255, 255, 255, 0.08);
-  --surface-hover: rgba(255, 255, 255, 0.08);
-  --text-primary: #ffffff;
-  --text-secondary: #a1a1aa;
-  --accent-color: #38bdf8;
-  --accent-hover: #0284c7;
-  --glass-blur: blur(16px);
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --pop-cyan: #00FFFF;
+  --pop-magenta: #FF00FF;
+  --pop-yellow: #FFFF00;
+  --pop-black: #111111;
+  --pop-white: #FFFFFF;
+  --pop-green: #00FF00;
+  
+  --bg-color: #f4f4f4;
+  --text-primary: var(--pop-black);
+  --text-secondary: #333333;
+  --accent-color: var(--pop-magenta);
+  --accent-hover: #D500D5;
+  
+  --border-thick: 4px solid var(--pop-black);
+  --shadow-solid: 8px 8px 0px var(--pop-black);
+  --shadow-hover: 4px 4px 0px var(--pop-black);
+  --transition: all 0.2s ease-in-out;
 }
 
 * {
@@ -23,9 +28,10 @@
 }
 
 body {
-  font-family: 'Inter', 'Pretendard', sans-serif;
+  font-family: 'Comic Neue', 'Pretendard', sans-serif;
+  font-weight: 700;
   background-color: var(--bg-color);
-  background-image: linear-gradient(to bottom, rgba(5,5,5,0.4), rgba(5,5,5,0.9)), url('/bg.png');
+  background-image: url('/pop_bg.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -34,6 +40,11 @@ body {
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .pop-title {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 2px;
 }
 
 a {
@@ -49,19 +60,18 @@ button {
   color: inherit;
 }
 
-/* Glassmorphism Utilities */
-.glass {
-  background: var(--surface-color);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--surface-border);
-  border-radius: 16px;
+/* Pop Art Card Utility */
+.pop-card {
+  background: var(--pop-white);
+  border: var(--border-thick);
+  border-radius: 0px; /* Sharp corners for pop art */
+  box-shadow: var(--shadow-solid);
   transition: var(--transition);
 }
 
-.glass:hover {
-  background: var(--surface-hover);
-  border-color: rgba(255, 255, 255, 0.15);
+.pop-card:hover {
+  transform: translate(4px, 4px);
+  box-shadow: var(--shadow-hover);
 }
 
 /* Container */
@@ -72,13 +82,14 @@ button {
 }
 
 /* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.8) translateY(20px); }
+  70% { transform: scale(1.05) translateY(-5px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 .delay-100 { animation-delay: 100ms; }
@@ -87,15 +98,16 @@ button {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 12px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg-color);
+  background: var(--pop-white);
+  border-left: var(--border-thick);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
+  background: var(--pop-magenta);
+  border: 2px solid var(--pop-black);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.4);
+  background: var(--pop-cyan);
 }

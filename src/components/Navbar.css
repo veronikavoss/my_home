@@ -4,37 +4,42 @@
   left: 0;
   right: 0;
   z-index: 1000;
+  background: var(--pop-yellow);
+  border-bottom: var(--border-thick);
   border-radius: 0;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  background: rgba(15, 23, 42, 0.6);
+  box-shadow: 0px 8px 0px rgba(17, 17, 17, 1);
+  transform: none !important; /* Navbar shouldn't shift on hover */
+}
+
+.navbar:hover {
+  transform: none;
+  box-shadow: 0px 8px 0px rgba(17, 17, 17, 1);
 }
 
 .navbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
+  height: 80px;
 }
 
 .navbar-logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: -0.05em;
-  background: linear-gradient(to right, #fff, var(--accent-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: opacity 0.3s ease;
+  font-family: 'Bangers', cursive;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: var(--pop-white);
+  text-shadow: 3px 3px 0px var(--pop-black), -1px -1px 0 var(--pop-black), 1px -1px 0 var(--pop-black), -1px 1px 0 var(--pop-black), 1px 1px 0 var(--pop-black);
+  transition: transform 0.2s;
 }
 
 .navbar-logo:hover {
-  opacity: 0.8;
+  transform: scale(1.1) rotate(-3deg);
+  opacity: 1;
 }
 
 .navbar-links {
   display: flex;
-  gap: 8px;
+  gap: 16px;
 }
 
 .nav-link {
@@ -42,18 +47,25 @@
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  border-radius: 12px;
-  color: var(--text-secondary);
-  font-weight: 500;
-  transition: var(--transition);
+  border-radius: 0px;
+  border: 3px solid transparent;
+  color: var(--pop-black);
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.2s;
 }
 
 .nav-link:hover {
-  color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.05);
+  color: var(--pop-black);
+  background: var(--pop-cyan);
+  border: 3px solid var(--pop-black);
+  box-shadow: 4px 4px 0px var(--pop-black);
+  transform: translateY(-2px);
 }
 
 .nav-link.active {
-  color: var(--accent-color);
-  background: rgba(56, 189, 248, 0.1);
+  color: var(--pop-white);
+  background: var(--pop-magenta);
+  border: 3px solid var(--pop-black);
+  box-shadow: 4px 4px 0px var(--pop-black);
 }

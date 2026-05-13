@@ -4,7 +4,7 @@ import './Navbar.css';
 
 const Navbar = () => {
   return (
-    <header className="navbar glass">
+    <header className="navbar pop-card">
       <div className="navbar-container container">
         <Link to="/" className="navbar-logo">
           <span className="logo-text">MySpace</span>

@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 0;
   cursor: pointer;
   height: 100%;
 }
 
 .movie-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transform: translate(4px, 4px);
+  box-shadow: 4px 4px 0px var(--pop-black);
 }
 
 .movie-image {
@@ -17,14 +17,16 @@
   width: 100%;
   aspect-ratio: 2/3;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--pop-black);
+  border-bottom: var(--border-thick);
 }
 
 .movie-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.2s ease;
+  filter: contrast(1.2) saturate(1.2); /* Pop art style image filter */
 }
 
 .movie-card:hover .movie-image img {
@@ -37,9 +39,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
+  background: rgba(255, 0, 255, 0.4);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease;
   display: flex;
   align-items: flex-end;
   padding: 16px;
@@ -50,36 +52,43 @@
 }
 
 .movie-rating {
-  color: #fbbf24;
-  font-weight: 700;
-  font-size: 1.1rem;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  color: var(--pop-yellow);
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  text-shadow: 3px 3px 0px var(--pop-black);
 }
 
 .movie-info {
   padding: 16px;
+  background-color: var(--pop-white);
+  flex: 1;
 }
 
 .movie-title {
-  font-size: 1.125rem;
-  font-weight: 700;
+  font-family: 'Bangers', cursive;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
   margin-bottom: 8px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: var(--pop-black);
 }
 
 .movie-meta {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.875rem;
-  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--pop-black);
 }
 
 .movie-genre {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--pop-cyan);
+  border: 2px solid var(--pop-black);
   padding: 2px 8px;
-  border-radius: 12px;
-  font-size: 0.75rem;
+  border-radius: 0;
+  font-size: 0.8rem;
+  box-shadow: 2px 2px 0px var(--pop-black);
 }

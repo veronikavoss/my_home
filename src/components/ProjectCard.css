@@ -1,29 +1,32 @@
 .project-card {
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
+  border-radius: 0;
   overflow: hidden;
   height: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: var(--pop-white);
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  transform: translate(4px, 4px);
+  box-shadow: 4px 4px 0px var(--pop-black);
 }
 
 .project-image-container {
   width: 100%;
   height: 200px;
   overflow: hidden;
-  background: rgba(0,0,0,0.2);
+  background: var(--pop-black);
+  border-bottom: var(--border-thick);
 }
 
 .project-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.2s ease;
+  filter: contrast(1.2) saturate(1.2);
 }
 
 .project-card:hover .project-image {
@@ -36,14 +39,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(129, 140, 248, 0.2));
+  background: var(--pop-yellow);
 }
 
 .project-image-text {
-  font-size: 4rem;
-  font-weight: 800;
-  color: rgba(255, 255, 255, 0.5);
-  text-transform: uppercase;
+  font-family: 'Bangers', cursive;
+  font-size: 5rem;
+  color: var(--pop-black);
+  text-shadow: 4px 4px 0px var(--pop-white);
 }
 
 .project-content {
@@ -54,15 +57,17 @@
 }
 
 .project-title {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  letter-spacing: 1px;
   margin-bottom: 8px;
-  color: var(--text-primary);
+  color: var(--pop-black);
 }
 
 .project-desc {
-  font-size: 1rem;
-  color: var(--text-secondary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
   margin-bottom: 20px;
   line-height: 1.5;
   flex: 1;
@@ -76,12 +81,14 @@
 }
 
 .project-tag {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--accent-color);
+  background: var(--pop-magenta);
+  color: var(--pop-white);
+  border: 2px solid var(--pop-black);
   padding: 4px 12px;
-  border-radius: 16px;
-  font-size: 0.8rem;
-  font-weight: 500;
+  border-radius: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: 2px 2px 0px var(--pop-black);
 }
 
 .project-links {
@@ -96,29 +103,33 @@
   justify-content: center;
   gap: 8px;
   padding: 10px 16px;
-  border-radius: 12px;
-  font-size: 0.9rem;
-  font-weight: 600;
+  border-radius: 0;
+  border: 3px solid var(--pop-black);
+  font-size: 1rem;
+  font-weight: 700;
   flex: 1;
   transition: var(--transition);
+  box-shadow: 4px 4px 0px var(--pop-black);
 }
 
 .project-link-btn.primary {
-  background: var(--accent-color);
-  color: #fff;
+  background: var(--pop-cyan);
+  color: var(--pop-black);
 }
 
 .project-link-btn.primary:hover {
-  background: var(--accent-hover);
-  transform: translateY(-2px);
+  background: var(--pop-yellow);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--pop-black);
 }
 
 .project-link-btn.secondary {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--text-primary);
+  background: var(--pop-white);
+  color: var(--pop-black);
 }
 
 .project-link-btn.secondary:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
+  background: #f0f0f0;
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--pop-black);
 }
