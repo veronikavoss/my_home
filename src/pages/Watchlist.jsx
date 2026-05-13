@@ -50,6 +50,14 @@ const WATCHLIST_DATA = [
     genre: 'Drama',
     rating: '8.5',
     image: 'https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg'
+  },
+  {
+    id: 7,
+    title: '2001: 스페이스 오디세이 (2001: A Space Odyssey)',
+    year: '1968',
+    genre: 'SF',
+    rating: '8.3',
+    image: 'https://image.tmdb.org/t/p/w500/jNSk4dXs1cHu0SoLxmmZ2W6CYKl.jpg'
   }
 ];
 

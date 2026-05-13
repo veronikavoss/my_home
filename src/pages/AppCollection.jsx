@@ -29,6 +29,15 @@ const APPS_DATA = [
     link: 'https://github.com/my-username/mkv-splitter-ui',
     repoLink: 'https://github.com/my-username/mkv-splitter-ui',
     image: null
+  },
+  {
+    id: 4,
+    title: 'Earnings',
+    description: '기업 실적(Earnings) 및 재무 관련 정보를 제공하는 웹 프로젝트입니다. GitHub에 호스팅된 HTML 애플리케이션입니다.',
+    tags: ['HTML', 'Finance', 'Data'],
+    link: 'https://veronikavoss.github.io/earnings',
+    repoLink: 'https://github.com/veronikavoss/earnings',
+    image: null
   }
 ];
 
