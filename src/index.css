@@ -1,19 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap');
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 :root {
-  --pop-cyan: #00FFFF;
-  --pop-magenta: #FF00FF;
-  --pop-yellow: #FFFF00;
-  --pop-black: #111111;
-  --pop-white: #FFFFFF;
-  --pop-green: #00FF00;
+  --pop-cyan: #00e5ff;
+  --pop-magenta: #ff007f;
+  --pop-yellow: #ffea00;
+  --pop-black: #000000;
+  --pop-white: #ffffff;
   
-  --bg-color: #f4f4f4;
+  --bg-color: var(--pop-yellow);
   --text-primary: var(--pop-black);
-  --text-secondary: #333333;
+  --text-secondary: #444444;
   --accent-color: var(--pop-magenta);
-  --accent-hover: #D500D5;
   
   --border-thick: 4px solid var(--pop-black);
   --shadow-solid: 8px 8px 0px var(--pop-black);
@@ -28,10 +26,9 @@
 }
 
 body {
-  font-family: 'Comic Neue', 'Pretendard', sans-serif;
-  font-weight: 700;
+  font-family: 'Inter', 'Pretendard', sans-serif;
   background-color: var(--bg-color);
-  background-image: url('/pop_bg.png');
+  background-image: url('/pop_frame_bg.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -43,8 +40,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, .pop-title {
-  font-family: 'Bangers', cursive;
-  letter-spacing: 2px;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 a {
@@ -63,38 +61,23 @@ button {
 /* Pop Art Card Utility */
 .pop-card {
   background: var(--pop-white);
-  border: var(--border-thick);
-  border-radius: 0px; /* Sharp corners for pop art */
-  box-shadow: var(--shadow-solid);
+  border: 3px solid var(--pop-black);
+  border-radius: 12px;
+  box-shadow: 6px 6px 0px var(--pop-black);
   transition: var(--transition);
 }
 
 .pop-card:hover {
-  transform: translate(4px, 4px);
-  box-shadow: var(--shadow-hover);
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0px var(--pop-black);
 }
 
 /* Container */
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
 }
-
-/* Animations */
-@keyframes popIn {
-  0% { opacity: 0; transform: scale(0.8) translateY(20px); }
-  70% { transform: scale(1.05) translateY(-5px); }
-  100% { opacity: 1; transform: scale(1) translateY(0); }
-}
-
-.animate-fade-in {
-  animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-}
-
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
@@ -105,9 +88,14 @@ button {
   border-left: var(--border-thick);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--pop-magenta);
-  border: 2px solid var(--pop-black);
+  background: var(--pop-black);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--pop-cyan);
+  background: var(--pop-magenta);
+}
+
+/* App Container (The main white box) */
+.app-wrapper {
+  padding: 40px 20px;
+  min-height: 100vh;
 }
